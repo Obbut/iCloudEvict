@@ -10,21 +10,10 @@
 		475F6B9C1B299D2A007E46D1 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475F6B9B1B299D2A007E46D1 /* main.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		475F6B961B299D2A007E46D1 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		475F6B981B299D2A007E46D1 /* iCloudEvict */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = iCloudEvict; sourceTree = BUILT_PRODUCTS_DIR; };
 		475F6B9B1B299D2A007E46D1 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		476D9C8B1B2ED92C00644E45 /* README.MD */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +30,7 @@
 		475F6B8F1B299D2A007E46D1 = {
 			isa = PBXGroup;
 			children = (
+				476D9C8B1B2ED92C00644E45 /* README.MD */,
 				475F6B9A1B299D2A007E46D1 /* iCloudEvict */,
 				475F6B991B299D2A007E46D1 /* Products */,
 			);
@@ -71,7 +61,6 @@
 			buildPhases = (
 				475F6B941B299D2A007E46D1 /* Sources */,
 				475F6B951B299D2A007E46D1 /* Frameworks */,
-				475F6B961B299D2A007E46D1 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -236,6 +225,7 @@
 				475F6BA11B299D2A007E46D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
