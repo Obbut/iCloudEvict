@@ -15,24 +15,17 @@ if Process.arguments.count != 3 {
     exit(1)
 }
 
-let evict: Bool
-switch Process.arguments[1] {
-case "evict":
-    evict = true
-case "download":
-    evict = false
-default:
-    fatalError("The first argument can be 'evict' or 'download'")
-}
-
-let path = Process.arguments[2]
-
 do {
+    let path = Process.arguments[2]
     let URL = NSURL(fileURLWithPath: path)
-    if evict {
+    
+    switch Process.arguments[1] {
+    case "evict":
         try NSFileManager.defaultManager().evictUbiquitousItemAtURL(URL)
-    } else {
+    case "download":
         try NSFileManager.defaultManager().startDownloadingUbiquitousItemAtURL(URL)
+    default:
+        fatalError("The first argument can be 'evict' or 'download'")
     }
     
     print("Complete.")
