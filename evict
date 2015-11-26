@@ -1,3 +1,5 @@
+#!/usr/bin/env xcrun swift
+
 //
 //  main.swift
 //  iCloudEvict
@@ -6,10 +8,11 @@
 //  Copyright © 2015 Robbert Brandsma. All rights reserved.
 //
 
-import AppKit
+import Foundation
 
 if Process.arguments.count != 3 {
-    fatalError("Usage:\niCloudEvict evict <filepath>\niCloudEvict download <filepath>")
+    print("Usage:\niCloudEvict evict <filepath>\niCloudEvict download <filepath>")
+    exit(1)
 }
 
 let evict: Bool
@@ -34,5 +37,6 @@ do {
     
     print("Complete.")
 } catch let error {
-    fatalError("The file(s) could not be evicted or downloaded:\n\(error)")
+    print("The file(s) could not be evicted or downloaded:\n\(error)")
+    exit(1)
 }
