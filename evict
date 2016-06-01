@@ -24,6 +24,9 @@ do {
         try NSFileManager.defaultManager().evictUbiquitousItemAtURL(URL)
     case "download":
         try NSFileManager.defaultManager().startDownloadingUbiquitousItemAtURL(URL)
+    case "publish":
+        let pubUrl = try NSFileManager.defaultManager().URLForPublishingUbiquitousItemAtURL(URL, expirationDate: nil)
+        print("The item is published at: \(pubUrl)")
     default:
         fatalError("The first argument can be 'evict' or 'download'")
     }
